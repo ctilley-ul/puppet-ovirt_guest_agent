@@ -28,7 +28,7 @@ class ovirt_guest_agent::params {
   $os = $::operatingsystem
 
   case $os {
-    'Redhat': {
+    'Redhat', "OracleLinux": {
       $service_name = 'ovirt-guest-agent'
       $package_name = 'ovirt-guest-agent-common'
     }
